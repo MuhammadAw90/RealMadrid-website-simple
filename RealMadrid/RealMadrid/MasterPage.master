@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="RealMadrid.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .ZIndex {
+            z-index: 999;
+            font-size: xx-large;
+            color: #000099;
+            font-style: italic;
+            font-weight: 700;
+            background-color: #6699FF;
+        }
+
+        .newStyle1 {
+            font-family: "Rockwell Extra Bold";
+            font-size: x-large;
+        }
+
+        .newStyle2 {
+            font-family: Algerian;
+            background-color: #6699FF;
+            color: #FF9900;
+        }
+
+        .newStyle3 {
+            font-size: x-large;
+        }
+
+        .newStyle4 {
+            font-size: x-large;
+            color: #000099;
+        }
+    </style>
+</head>
+<body bgcolor="#ffffff">
+    <form id="form1" runat="server">
+        <div>
+            <table width="100%">
+                <tr>
+                    <td colspan="2">
+                        <center>
+                            <asp:ImageButton ID="ImageButton_new" runat="server" ImageUrl="Images/fc-real-madrid-facebook-cover.jpg" width="100%" height="300" PostBackUrl="Default.aspx"/>
+                            </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="100%"
+                            OnMenuItemClick="Menu1_MenuItemClick" BackColor="#B5C7DE"
+                            DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="15"
+                            ForeColor="#284E98" StaticSubMenuIndent="10px" Font-Bold="True" Font-Italic="True"
+                            Font-Overline="False" CssClass="newStyle4">
+                            <StaticSelectedStyle BackColor="#507CD1" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <DynamicMenuStyle CssClass="ZIndex" BackColor="#B5C7DE" />
+                            <DynamicSelectedStyle BackColor="#507CD1" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/News.aspx" Text="News" Value="News"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/About.aspx" Text="History" Value="About"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/players.aspx" Text="Players" Value="contact us"></asp:MenuItem>
+                                <asp:MenuItem Text="images" Value="Images">
+                                    <asp:MenuItem NavigateUrl="~/PrivateImg.aspx" Text="Private Images"
+                                        Value="private"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/images.aspx" Text="Players Images"
+                                        Value="Players images"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Stadium.aspx" Text="Stadium" Value="Stadium"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Matches.aspx" Text="Matches" Value="Matches"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Cups.aspx" Text="Cups" Value="Cups"></asp:MenuItem>
+                                <asp:MenuItem Text="Messages" Value="Messages">
+                                    <asp:MenuItem NavigateUrl="~/Inbox.aspx" Text="InBox" Value="InBox"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Outbox.aspx" Text="OutBox" Value="OutBox"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Shop.aspx" Text="Shop" Value="Shop"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SearchPlayer.aspx" Text="Search Player"
+                                    Value="Search Player"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Register.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                                <asp:MenuItem Text="Login" Value="LogInOut"></asp:MenuItem>
+                                <asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem>
+                                <asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem>
+                                <asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem>
+                                <asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem>
+                                <asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem><asp:MenuItem Text=""></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="Cart.aspx" Text="Cart" runat="server"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <marquee direction="left" onmouseout="this.start()" onmouseover="this.stop()">
+                            <b>
+                                <h1>
+                                    <asp:Label ID="LabelNews" runat="server" Text=""></asp:Label></h1>
+                            </b>
+                        </marquee>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" Width="100%"
+                            BackColor="#B5C7DE"
+                            DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="15"
+                            ForeColor="#284E98" StaticSubMenuIndent="10px" Font-Bold="True" Font-Italic="True"
+                            Font-Overline="False" OnMenuItemClick="Menu2_MenuItemClick" CssClass="newStyle3">
+                            <StaticSelectedStyle BackColor="#507CD1" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <DynamicMenuStyle CssClass="ZIndex" BackColor="#B5C7DE" />
+                            <DynamicSelectedStyle BackColor="#507CD1" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/NewsEditor.aspx" Text="News Editor"
+                                    Value="News Editor"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/PlayersEditor.aspx" Text="Players Editor"
+                                    Value="Players Editor">
+                                    <asp:MenuItem NavigateUrl="~/PlayerImage.aspx" Text="Player Imges Editor"
+                                        Value="Player Imges Editor"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ImagesEditor.aspx" Text="Images Editor"
+                                    Value="Images Editor"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UsefulLinksEditor.aspx" Text="UsefulLinksEditor"
+                                    Value="UsefullLinksEditor"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/InfoEditor.aspx" Text="Information Editor"
+                                    Value="Information Editor"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CommentsEditor.aspx" Text="Comments Editor"
+                                    Value="Comments Editor"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CupsEditor.aspx" Text="Cups Editor"
+                                    Value="Cups Editor"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Userseditor.aspx" Text="Users Editor"
+                                    Value="Users Editor"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center><asp:Label ID="LabelFooter" runat="server" Text=""></asp:Label></center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

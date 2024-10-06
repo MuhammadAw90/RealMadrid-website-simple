@@ -1,0 +1,7 @@
+C:\Users\MuhaA\Desktop\RealProj\RealMadrid\RealMadrid\obj\Debug\RealMadrid.csproj.AssemblyReference.cache
+C:\Users\MuhaA\Desktop\RealProj\RealMadrid\RealMadrid\obj\Debug\RealMadrid.csproj.CoreCompileInputs.cache
+C:\Users\MuhaA\Desktop\RealProj\RealMadrid\RealMadrid\bin\RealMadrid.dll.config
+C:\Users\MuhaA\Desktop\RealProj\RealMadrid\RealMadrid\bin\RealMadrid.dll
+C:\Users\MuhaA\Desktop\RealProj\RealMadrid\RealMadrid\bin\RealMadrid.pdb
+C:\Users\MuhaA\Desktop\RealProj\RealMadrid\RealMadrid\obj\Debug\RealMadrid.dll
+C:\Users\MuhaA\Desktop\RealProj\RealMadrid\RealMadrid\obj\Debug\RealMadrid.pdb

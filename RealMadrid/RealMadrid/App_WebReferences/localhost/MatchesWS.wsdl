@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetClubs">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClubsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClubsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGamesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetClubsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClubs" />
+  </wsdl:message>
+  <wsdl:message name="GetClubsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClubsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGames" />
+  </wsdl:message>
+  <wsdl:message name="GetGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGamesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DefaultSoap">
+    <wsdl:operation name="GetClubs">
+      <wsdl:input message="tns:GetClubsSoapIn" />
+      <wsdl:output message="tns:GetClubsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <wsdl:input message="tns:GetGamesSoapIn" />
+      <wsdl:output message="tns:GetGamesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DefaultSoap" type="tns:DefaultSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClubs">
+      <soap:operation soapAction="http://tempuri.org/GetClubs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <soap:operation soapAction="http://tempuri.org/GetGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DefaultSoap12" type="tns:DefaultSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClubs">
+      <soap12:operation soapAction="http://tempuri.org/GetClubs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <soap12:operation soapAction="http://tempuri.org/GetGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MatchesWS">
+    <wsdl:port name="DefaultSoap" binding="tns:DefaultSoap">
+      <soap:address location="http://localhost:1893/Madrid%20website/MatchesWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DefaultSoap12" binding="tns:DefaultSoap12">
+      <soap12:address location="http://localhost:1893/Madrid%20website/MatchesWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

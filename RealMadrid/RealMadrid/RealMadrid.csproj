@@ -1,0 +1,617 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E8DD752-07F9-47A5-8B6E-E0C2863A3CAF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealMadrid</RootNamespace>
+    <AssemblyName>RealMadrid</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44351</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\db.accdb" />
+    <Content Include="CupImage.aspx" />
+    <Content Include="Cups Pics\AudiCup.jpg" />
+    <Content Include="Cups Pics\Best Club.jpg" />
+    <Content Include="Cups Pics\bestclup.jpg" />
+    <Content Include="Cups Pics\Campeonatos-Regionales_220.jpg" />
+    <Content Include="Cups Pics\Champions Leage.jpg" />
+    <Content Include="Cups Pics\CHAMPIONS20174.jpg" />
+    <Content Include="Cups Pics\COPAS DEL REY.jpg" />
+    <Content Include="Cups Pics\Copas-del-Rey_220.jpg" />
+    <Content Include="Cups Pics\Copas-Latinas_220.jpg" />
+    <Content Include="Cups Pics\EuropaSuperCup_220.jpg" />
+    <Content Include="Cups Pics\EUROPEAN SUPER CUP.jpg" />
+    <Content Include="Cups Pics\INTERCONTINENTAL.jpg" />
+    <Content Include="Cups Pics\LATIN CUPS.jpg" />
+    <Content Include="Cups Pics\LEAGUE CUP.jpg" />
+    <Content Include="Cups Pics\league2.jpg" />
+    <Content Include="Cups Pics\LIGAS.jpg" />
+    <Content Include="Cups Pics\Ligas2.jpg" />
+    <Content Include="Cups Pics\MANCOMUNADOS TROPHIES.jpg" />
+    <Content Include="Cups Pics\REGIONAL CHAMPIONSHIP.jpg" />
+    <Content Include="Cups Pics\SMALL WORLD CUPS.jpg" />
+    <Content Include="Cups Pics\smallworld2.jpg" />
+    <Content Include="Cups Pics\SPANISH SUPER CUPS.jpg" />
+    <Content Include="Cups Pics\spanishsuper2.jpg" />
+    <Content Include="Cups Pics\UEFA CUPS.jpg" />
+    <Content Include="Cups Pics\UEFA_220.jpg" />
+    <Content Include="Docs\1.jpg" />
+    <Content Include="Docs\11.jpg" />
+    <Content Include="Docs\20.jpg" />
+    <Content Include="Docs\M.JPG" />
+    <Content Include="Docs\New.jpg" />
+    <Content Include="Docs\Team.jpg" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\385338_heroa.jpg" />
+    <Content Include="Images\390634_heroa.jpg" />
+    <Content Include="Images\391684_heroa.jpg" />
+    <Content Include="Images\asp.jpg" />
+    <Content Include="Images\Down.jpg" />
+    <Content Include="Images\Facebook.png" />
+    <Content Include="Images\fc-real-madrid-facebook-cover.jpg" />
+    <Content Include="Images\FinalLogo.jpg" />
+    <Content Include="Images\instagram.jpg" />
+    <Content Include="Images\Instagram.png" />
+    <Content Include="Images\Instagram_logo.png" />
+    <Content Include="Images\INTERCONTINENTAL.jpg" />
+    <Content Include="Images\M.JPG" />
+    <Content Include="Images\New.jpg" />
+    <Content Include="Images\Official.jpg" />
+    <Content Include="Images\real-logo.png" />
+    <Content Include="Images\real-madrid-wallpaper.jpg" />
+    <Content Include="Images\real2022.jpeg" />
+    <Content Include="Docs\squad.jpg" />
+    <Content Include="Images\realMadrid24.jpg" />
+    <Content Include="Images\Team.jpg" />
+    <Content Include="Images\Up.jpg" />
+    <Content Include="Images\UCL2024.jpg" />
+    <Content Include="Images\YouTube.jpg" />
+    <Content Include="MatchesWS.asmx" />
+    <Content Include="Players\1.JPG" />
+    <Content Include="Players\11.jpg" />
+    <Content Include="Players\12.jpg" />
+    <Content Include="Players\13.jpg" />
+    <Content Include="Players\14.jpg" />
+    <Content Include="Players\15.jpg" />
+    <Content Include="Players\16.jpg" />
+    <Content Include="Players\17.jpg" />
+    <Content Include="Players\18.jpg" />
+    <Content Include="Players\19.jpg" />
+    <Content Include="Players\2.jpg" />
+    <Content Include="Players\20.jpg" />
+    <Content Include="Players\21.jpg" />
+    <Content Include="Players\22.jpg" />
+    <Content Include="Players\23.jpg" />
+    <Content Include="Players\24.jpg" />
+    <Content Include="Players\25.jpg" />
+    <Content Include="Players\3.jpg" />
+    <Content Include="Players\4.jpg" />
+    <Content Include="Players\5.jpg" />
+    <Content Include="Players\6.jpg" />
+    <Content Include="Players\7.jpg" />
+    <Content Include="Players\9.jpg" />
+    <Content Include="Players\andriyLunin.jpg" />
+    <Content Include="Players\asier-illarramendi.jpg" />
+    <Content Include="Players\Bale.jpg" />
+    <Content Include="Players\benzema.jpg" />
+    <Content Include="Players\Carvajal.jpg" />
+    <Content Include="Players\Casemiro.jpg" />
+    <Content Include="Players\courtois.jpeg" />
+    <Content Include="Players\David-Alaba-1.jpeg" />
+    <Content Include="Players\Isco.jpg" />
+    <Content Include="Players\marcelo.jpg" />
+    <Content Include="Players\MODRIC.png" />
+    <Content Include="Players\Nacho.jpg" />
+    <Content Include="Players\Mendy.jpg" />
+    <Content Include="Players\Kroos.jpg" />
+    <Content Include="Players\vini jr.html" />
+    <Content Include="Players\vini jr.png" />
+    <Content Include="Players\vini jr_files\dark_thumbnail2.png" />
+    <Content Include="Players\vini jr_files\device_default_thumbnail2.png" />
+    <Content Include="Players\vini jr_files\light_thumbnail2.png" />
+    <Content Include="Shop\Ber-visit.jpeg" />
+    <Content Include="Shop\ClubCard.jpg" />
+    <Content Include="Shop\scarf.jpg" />
+    <Content Include="Shop\t-shirt.jpg" />
+    <Content Include="Stadium\1.jpg" />
+    <Content Include="Stadium\10.jpg" />
+    <Content Include="Stadium\11.jpg" />
+    <Content Include="Stadium\12.jpg" />
+    <Content Include="Stadium\13.jpg" />
+    <Content Include="Stadium\14.jpg" />
+    <Content Include="Stadium\15.jpg" />
+    <Content Include="Stadium\16.jpg" />
+    <Content Include="Stadium\17.jpg" />
+    <Content Include="Stadium\18.jpg" />
+    <Content Include="Stadium\19.jpg" />
+    <Content Include="Stadium\2.jpg" />
+    <Content Include="Stadium\20.jpg" />
+    <Content Include="Stadium\21.jpg" />
+    <Content Include="Stadium\22.jpg" />
+    <Content Include="Stadium\23.jpg" />
+    <Content Include="Stadium\24.jpg" />
+    <Content Include="Stadium\25.jpg" />
+    <Content Include="Stadium\3.jpg" />
+    <Content Include="Stadium\4.jpg" />
+    <Content Include="Stadium\5.jpg" />
+    <Content Include="Stadium\6.jpg" />
+    <Content Include="Stadium\7.jpg" />
+    <Content Include="Stadium\8.jpg" />
+    <Content Include="Stadium\9.jpg" />
+    <Content Include="UL Pics\Facebook.png" />
+    <Content Include="UL Pics\instagram.jpg" />
+    <Content Include="UL Pics\Official.jpg" />
+    <Content Include="UL Pics\Twitter.jpg" />
+    <Content Include="UL Pics\YouTube.jpg" />
+    <Content Include="Images\123.webp" />
+    <Content Include="Images\realmadridlogo.webp" />
+    <Content Include="Players\toniFuidias.jpg_large" />
+    <Content Include="Players\vini jr_files\cb=gapi.loaded_0" />
+    <Content Include="Players\vini jr_files\faviconV2" />
+    <Content Include="Players\vini jr_files\faviconV2%281%29" />
+    <Content Include="Players\vini jr_files\FCFrzEzVQAcbtmu.jpg_large" />
+    <Content Include="Players\vini jr_files\images" />
+    <Content Include="Players\vini jr_files\images%281%29" />
+    <Content Include="Players\vini jr_files\images%2810%29" />
+    <Content Include="Players\vini jr_files\images%2811%29" />
+    <Content Include="Players\vini jr_files\images%2812%29" />
+    <Content Include="Players\vini jr_files\images%2813%29" />
+    <Content Include="Players\vini jr_files\images%2814%29" />
+    <Content Include="Players\vini jr_files\images%2815%29" />
+    <Content Include="Players\vini jr_files\images%2816%29" />
+    <Content Include="Players\vini jr_files\images%2817%29" />
+    <Content Include="Players\vini jr_files\images%2818%29" />
+    <Content Include="Players\vini jr_files\images%2819%29" />
+    <Content Include="Players\vini jr_files\images%282%29" />
+    <Content Include="Players\vini jr_files\images%2820%29" />
+    <Content Include="Players\vini jr_files\images%2821%29" />
+    <Content Include="Players\vini jr_files\images%2822%29" />
+    <Content Include="Players\vini jr_files\images%2823%29" />
+    <Content Include="Players\vini jr_files\images%2824%29" />
+    <Content Include="Players\vini jr_files\images%2825%29" />
+    <Content Include="Players\vini jr_files\images%2826%29" />
+    <Content Include="Players\vini jr_files\images%2827%29" />
+    <Content Include="Players\vini jr_files\images%2828%29" />
+    <Content Include="Players\vini jr_files\images%2829%29" />
+    <Content Include="Players\vini jr_files\images%283%29" />
+    <Content Include="Players\vini jr_files\images%2830%29" />
+    <Content Include="Players\vini jr_files\images%2831%29" />
+    <Content Include="Players\vini jr_files\images%2832%29" />
+    <Content Include="Players\vini jr_files\images%2833%29" />
+    <Content Include="Players\vini jr_files\images%2834%29" />
+    <Content Include="Players\vini jr_files\images%2835%29" />
+    <Content Include="Players\vini jr_files\images%2836%29" />
+    <Content Include="Players\vini jr_files\images%2837%29" />
+    <Content Include="Players\vini jr_files\images%2838%29" />
+    <Content Include="Players\vini jr_files\images%2839%29" />
+    <Content Include="Players\vini jr_files\images%284%29" />
+    <Content Include="Players\vini jr_files\images%2840%29" />
+    <Content Include="Players\vini jr_files\images%2841%29" />
+    <Content Include="Players\vini jr_files\images%2842%29" />
+    <Content Include="Players\vini jr_files\images%2843%29" />
+    <Content Include="Players\vini jr_files\images%2844%29" />
+    <Content Include="Players\vini jr_files\images%2845%29" />
+    <Content Include="Players\vini jr_files\images%2846%29" />
+    <Content Include="Players\vini jr_files\images%285%29" />
+    <Content Include="Players\vini jr_files\images%286%29" />
+    <Content Include="Players\vini jr_files\images%287%29" />
+    <Content Include="Players\vini jr_files\images%288%29" />
+    <Content Include="Players\vini jr_files\images%289%29" />
+    <Content Include="Players\vini jr_files\m=_b,_tp" />
+    <Content Include="Players\vini jr_files\rs=AA2YrTsHgfR9b0cqQkUkzGHEl3I7ha1_YQ" />
+    <Content Include="Players\vini jr_files\rs=AA2YrTuInZoncsuX0Oo2pLMIBSGp8UAyuQ" />
+    <Content Include="About.aspx" />
+    <Content Include="Comments.aspx" />
+    <Content Include="CommentsEditor.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="Cups.aspx" />
+    <Content Include="CupsEditor.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EditNews.aspx" />
+    <Content Include="Images.aspx" />
+    <Content Include="ImagesEditor.aspx" />
+    <Content Include="Inbox.aspx" />
+    <Content Include="InfoEditor.aspx" />
+    <Content Include="LNew.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Matches.aspx" />
+    <Content Include="NewInfo.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="NewsEditor.aspx" />
+    <Content Include="Outbox.aspx" />
+    <Content Include="PlayerImage.aspx" />
+    <Content Include="PlayerInfo.aspx" />
+    <Content Include="Players.aspx" />
+    <Content Include="PlayersEditor.aspx" />
+    <Content Include="PrivateImg.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="SearchPlayer.aspx" />
+    <Content Include="Shop.aspx" />
+    <Content Include="SendMessage.aspx" />
+    <Content Include="Squad.aspx" />
+    <Content Include="Stadium.aspx" />
+    <Content Include="ULImage.aspx" />
+    <Content Include="UpdatePlayer.aspx" />
+    <Content Include="Usefull.aspx" />
+    <Content Include="UsefulLinksEditor.aspx" />
+    <Content Include="UsersEditor.aspx" />
+    <Content Include="MasterPage.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\AboutClass.cs" />
+    <Compile Include="Code\CartClass.cs" />
+    <Compile Include="Code\CommentsClass.cs" />
+    <Compile Include="Code\CupsClass.cs" />
+    <Compile Include="Code\Dbase.cs" />
+    <Compile Include="Code\FilesClass.cs" />
+    <Compile Include="Code\InfoClass.cs" />
+    <Compile Include="Code\MatchesWS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\MessagesClass.cs" />
+    <Compile Include="Code\NewsClass.cs" />
+    <Compile Include="Code\PlayersClass.cs" />
+    <Compile Include="Code\ShopItems.cs" />
+    <Compile Include="Code\UsefulLinksClass.cs" />
+    <Compile Include="Code\UsersClass.cs" />
+    <Compile Include="Comments.aspx.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comments.aspx.designer.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommentsEditor.aspx.cs">
+      <DependentUpon>CommentsEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommentsEditor.aspx.designer.cs">
+      <DependentUpon>CommentsEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CupImage.aspx.cs">
+      <DependentUpon>CupImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CupImage.aspx.designer.cs">
+      <DependentUpon>CupImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cups.aspx.cs">
+      <DependentUpon>Cups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cups.aspx.designer.cs">
+      <DependentUpon>Cups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CupsEditor.aspx.cs">
+      <DependentUpon>CupsEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CupsEditor.aspx.designer.cs">
+      <DependentUpon>CupsEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditNews.aspx.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditNews.aspx.designer.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Images.aspx.cs">
+      <DependentUpon>images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Images.aspx.designer.cs">
+      <DependentUpon>images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImagesEditor.aspx.cs">
+      <DependentUpon>ImagesEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImagesEditor.aspx.designer.cs">
+      <DependentUpon>ImagesEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoEditor.aspx.cs">
+      <DependentUpon>InfoEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoEditor.aspx.designer.cs">
+      <DependentUpon>InfoEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LNew.aspx.cs">
+      <DependentUpon>LNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LNew.aspx.designer.cs">
+      <DependentUpon>LNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Matches.aspx.cs">
+      <DependentUpon>Matches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Matches.aspx.designer.cs">
+      <DependentUpon>Matches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewInfo.aspx.cs">
+      <DependentUpon>NewInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewInfo.aspx.designer.cs">
+      <DependentUpon>NewInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsEditor.aspx.cs">
+      <DependentUpon>NewsEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsEditor.aspx.designer.cs">
+      <DependentUpon>NewsEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Outbox.aspx.cs">
+      <DependentUpon>Outbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Outbox.aspx.designer.cs">
+      <DependentUpon>Outbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerImage.aspx.cs">
+      <DependentUpon>PlayerImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlayerImage.aspx.designer.cs">
+      <DependentUpon>PlayerImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerInfo.aspx.cs">
+      <DependentUpon>PlayerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlayerInfo.aspx.designer.cs">
+      <DependentUpon>PlayerInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Players.aspx.cs">
+      <DependentUpon>Players.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Players.aspx.designer.cs">
+      <DependentUpon>Players.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlayersEditor.aspx.cs">
+      <DependentUpon>PlayersEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlayersEditor.aspx.designer.cs">
+      <DependentUpon>PlayersEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrivateImg.aspx.cs">
+      <DependentUpon>PrivateImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivateImg.aspx.designer.cs">
+      <DependentUpon>PrivateImg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPlayer.aspx.cs">
+      <DependentUpon>SearchPlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchPlayer.aspx.designer.cs">
+      <DependentUpon>SearchPlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendMessage.aspx.cs">
+      <DependentUpon>SendMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendMessage.aspx.designer.cs">
+      <DependentUpon>SendMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Squad.aspx.cs">
+      <DependentUpon>Squad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Squad.aspx.designer.cs">
+      <DependentUpon>Squad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stadium.aspx.cs">
+      <DependentUpon>Stadium.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stadium.aspx.designer.cs">
+      <DependentUpon>Stadium.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ULImage.aspx.cs">
+      <DependentUpon>ULImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ULImage.aspx.designer.cs">
+      <DependentUpon>ULImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePlayer.aspx.cs">
+      <DependentUpon>UpdatePlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdatePlayer.aspx.designer.cs">
+      <DependentUpon>UpdatePlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usefull.aspx.cs">
+      <DependentUpon>Usefull.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usefull.aspx.designer.cs">
+      <DependentUpon>Usefull.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsefulLinksEditor.aspx.cs">
+      <DependentUpon>UsefulLinksEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsefulLinksEditor.aspx.designer.cs">
+      <DependentUpon>UsefulLinksEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersEditor.aspx.cs">
+      <DependentUpon>Userseditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersEditor.aspx.designer.cs">
+      <DependentUpon>Userseditor.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64295</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44351/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
